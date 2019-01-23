@@ -2,7 +2,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Portfolio',
+    title: 'Portfolio'
   },
   plugins: [
     'gatsby-plugin-resolve-src',
@@ -14,9 +14,9 @@ module.exports = {
         name: 'TESTS',
         short_name: 'starter',
         start_url: '/',
-        display: 'minimal-ui',
+        display: 'minimal-ui'
         // icon: 'static/assets/android-chrome-512x512.png', // This path is relative to the root of the site.
-      },
+      }
     },
     'gatsby-plugin-netlify-cms',
     `gatsby-transformer-json`,
@@ -24,21 +24,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/assets`,
-      },
+        path: `./static/assets`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/pages`,
-      },
+        path: `./src/pages`
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    'gatsby-plugin-offline',
+    'gatsby-plugin-offline'
   ],
 }
