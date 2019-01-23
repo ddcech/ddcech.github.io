@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: ddcech/ddcech.github.io
+  branch: "master"
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "LandingPage"
+        name: "landing"
+        file: "src/pages/landing.json"
+        fields:
+          - {label: PageName, name: pageName, widget: hidden}
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: Quote, name: quote, widget: string}
+          - {label: About, name: about, widget: markdown}
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields: 
+              - {label: "Linkedin", name: "linkedin", widget: "string"}
+              - {label: "Facebook", name: "facebook", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string"}
+media_folder: static/img
+public_folder: /img
