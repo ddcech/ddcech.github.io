@@ -19,19 +19,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-netlify-cms',
-    `gatsby-transformer-json`,
+    'gatsby-transformer-json',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `./static/assets`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `./src/pages`
+        name: `pages`,
+        path: `${__dirname}/src/pages`
       }
     },
     'gatsby-transformer-sharp',
