@@ -25,9 +25,9 @@ collections:
               - {label: "Instagram", name: "instagram", widget: "string"}
   - name: "projects"
     label: "Project"
-    folder: "static/projects"
+    folder: "src/projects"
     create: true
-    identifier_field: project_name
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Project Name", name: "project_name", widget: "string" }
       - { label: "Project Document", name: "project_doc", widget: "file", required: false }
