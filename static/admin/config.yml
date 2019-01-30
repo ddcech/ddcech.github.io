@@ -23,5 +23,15 @@ collections:
               - {label: "Facebook", name: "facebook", widget: "string"}
               - {label: "Twitter", name: "twitter", widget: "string"}
               - {label: "Instagram", name: "instagram", widget: "string"}
+  - name: "projects"
+    label: "Project"
+    folder: "static/projects"
+    create: true
+    identifier_field: project_name
+    fields:
+      - { label: "Project Name", name: "project_name", widget: "string" }
+      - { label: "Project Document", name: "project_doc", widget: "file", required: false }
+      - { label: "Project Description", name: "description", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "date", default: "", format: "MMM Do YY" }
 media_folder: static/img
 public_folder: /img
