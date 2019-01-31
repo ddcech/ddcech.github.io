@@ -4,15 +4,14 @@ import { graphql } from 'gatsby'
 import Header from 'components/Header'
 import Quote from 'components/Quote'
 import About from 'components/About'
-import Portfolio from 'components/Portfolio'
+// import Portfolio from 'components/Portfolio'
 import EndQuote from 'components/EndQuote'
 import EndNote from 'components/EndNote'
 import Footer from 'components/Footer'
 
-class Home extends Component {
+class Landing extends Component {
   render() {
-    console.log(this.props)
-    const { title, intro, quote, about, social } = this.props.data.allPagesJson.edges[0].node
+    const { title, intro, quote, about, social } = this.props.data.landing.edges[0].node
 
     return (
       <Fragment>
@@ -28,16 +27,9 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
-  location: PropTypes.shape({
-    search: PropTypes.string.isRequired,
-  }).isRequired,
-}
-
-
 export const query = graphql`
   query IndexQuery {
-    allPagesJson(filter: {pageName: {eq: "landing"}}) {
+    landing: allPagesJson(filter: {pageName: {eq: "landing"}}) {
       edges {
         node {
           id
@@ -45,10 +37,14 @@ export const query = graphql`
           intro
           quote
           about
+          social {
+            network
+            link
+          }
         }
       }
     }
   }
 `
 
-export default Home
+export default Landing

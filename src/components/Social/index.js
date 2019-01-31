@@ -1,14 +1,13 @@
 import React from 'react'
-import { Ul, Li, Link, Title } from './styled'
-// import { networks } from './constants'
+import { Ul, Li, Link } from './styled'
+import networkIcons from './networkIcons'
 
-const Social = ({ networks }) => console.log(networks) || (
+const Social = ({ networks }) => (
   <Ul>
-    {networks.map(val => (
-      <Li key={val.title}>
-        <Link target="_blank" rel="noopener noreferrer" href={val.url}>
-          {val.icon}
-          <Title>{val.title}</Title>
+    {networks.map(n => (
+      <Li key={n.network}>
+        <Link target="_blank" rel="noopener noreferrer" href={n.link}>
+          {networkIcons[n.network]}
         </Link>
       </Li>
     ))}
