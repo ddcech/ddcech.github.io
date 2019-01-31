@@ -15,13 +15,11 @@ collections:
           - {label: Intro, name: intro, widget: string}
           - {label: Quote, name: quote, widget: string}
           - {label: About, name: about, widget: markdown}
+          - {label: End Quote, name: endQuote, widget: string}
+          - {label: End Note, name: endNote, widget: markdown}
           - label: "Social Links"
             name: "social"
             widget: "list"
-            # fields:
-            # - label: Network
-            #   name: network
-            #   widget: object
             fields:
               - label: Network
                 name: network

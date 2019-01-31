@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Ul, Li, Link } from './styled'
 import networkIcons from './networkIcons'
 
@@ -13,5 +14,9 @@ const Social = ({ networks }) => (
     ))}
   </Ul>
 )
+
+Social.propTypes = {
+  networks: PropTypes.array.isRequired,
+}
 
 export default Social

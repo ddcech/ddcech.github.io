@@ -1,10 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Wrapper } from './styled'
 
-const EndQuote = () => (
+const EndQuote = ({ text }) => (
   <Wrapper>
-    <div>Like what you see?</div>
+    <div>{text}</div>
   </Wrapper>
 )
+
+EndQuote.propTypes = {
+  text: PropTypes.string,
+}
+
+EndQuote.defaultProps = {
+  text: '',
+}
 
 export default EndQuote

@@ -1,21 +1,26 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 import Container from 'components/Container'
 import { Wrapper, StyledAboutText } from './styled'
 
-const EndNote = () => (
+const EndNote = ({ text }) => (
   <Container>
     <Wrapper>
       <StyledAboutText>
-        <p>
-          Pellentesque convallis turpis ex, id varius odio porta eget. Nullam accumsan lectus sed mattis feugiat.
-          Aenean ac ligula in sem viverra ultrices. Proin feugiat nec est eu lobortis.
-          Proin mollis tempus libero, vitae hendrerit mauris sodales ac.
-        </p>
-        <p>Thank you,</p>
-        <p>Have a great day :)</p>
+        {<ReactMarkdown source={text} />}
       </StyledAboutText>
     </Wrapper>
   </Container>
 )
+
+EndNote.propTypes = {
+  text: PropTypes.string,
+}
+
+EndNote.defaultProps = {
+  text: '',
+}
+
 
 export default EndNote
