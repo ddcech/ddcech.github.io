@@ -1,8 +1,8 @@
 import React from 'react'
 import { Ul, Li, Link, Title } from './styled'
-import { networks } from './constants'
+// import { networks } from './constants'
 
-const Social = () => (
+const Social = ({ networks }) => console.log(networks) || (
   <Ul>
     {networks.map(val => (
       <Li key={val.title}>
