@@ -2,10 +2,10 @@ import React from 'react'
 import Social from '../Social'
 import { Wrapper, Name, Intro, SocialWrap } from './styled'
 
-const Header = () => (
+const Header = ({ title, intro }) => (
   <Wrapper>
-    <Name>Steve Person</Name>
-    <Intro>developer</Intro>
+    <Name>{title && title}</Name>
+    <Intro>{intro && intro }</Intro>
     <SocialWrap>
       <Social />
     </SocialWrap>

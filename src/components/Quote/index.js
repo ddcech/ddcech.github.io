@@ -1,9 +1,9 @@
 import React from 'react'
 import { Wrapper } from './styled'
 
-const Quote = () => (
+const Quote = ({ text }) => (
   <Wrapper>
-    <div>"I build stuff that sells"</div>
+    <div>{text && text}</div>
   </Wrapper>
 )
 

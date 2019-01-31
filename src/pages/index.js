@@ -12,15 +12,14 @@ import Footer from 'components/Footer'
 class Home extends Component {
   render() {
     console.log(this.props)
-    const page = this.props.data.allPagesJson.edges[0].node
-    console.log(page)
+    const { title, intro, quote, about } = this.props.data.allPagesJson.edges[0].node
 
     return (
       <Fragment>
-        <Header />
-        <Quote />
-        <About />
-        <Portfolio />
+        <Header title={title} intro={intro} />
+        <Quote text={quote} />
+        <About text={about} />
+        {/* <Portfolio /> */}
         <EndQuote />
         <EndNote />
         <Footer />
