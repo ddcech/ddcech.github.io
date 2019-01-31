@@ -18,6 +18,7 @@ collections:
     file: "src/pages/social.json"
     create: true
     fields:
+      - {label: PageName, name: pageName, widget: hidden, default: "social"}
       - {label: Network Name, name: networkName, widget: string}
       - {label: Link, name: link, widget: string}
   - label: "Pages"
