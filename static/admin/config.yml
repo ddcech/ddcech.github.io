@@ -29,9 +29,9 @@ collections:
             name: "social"
             widget: "object"
             fields: 
-              - {label: "Linkedin", name: "linkedin", widget: "string"}
-              - {label: "Facebook", name: "facebook", widget: "string"}
-              - {label: "Twitter", name: "twitter", widget: "string"}
-              - {label: "Instagram", name: "instagram", widget: "string"}
+              - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+              - {label: "Facebook", name: "facebook", widget: "string", required: false}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
 media_folder: static/img
 public_folder: /img
