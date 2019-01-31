@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
-// import { graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Header from 'components/Header'
 import Quote from 'components/Quote'
 import About from 'components/About'
@@ -11,8 +11,9 @@ import Footer from 'components/Footer'
 
 class Home extends Component {
   render() {
-    // const page = this.props.data.allPagesJson.edges[0].node
-    // console.log(page)
+    console.log(this.props)
+    const page = this.props.data//.allPagesJson.edges.node
+    console.log(page)
 
     return (
       <Fragment>
@@ -35,17 +36,20 @@ Home.propTypes = {
 }
 
 
-// export const query = graphql`
-//   query IndexQuery {
-//     allPagesJson(filter: {title: {eq: "landing"}}) {
-//       edges {
-//         node {
-//           id
-//           name
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query IndexQuery {
+    allPagesJson(filter: {title: {eq: "landing"}}) {
+      edges {
+        node {
+          id
+          title
+          intro
+          quote
+          about
+        }
+      }
+    }
+  }
+`
 
 export default Home

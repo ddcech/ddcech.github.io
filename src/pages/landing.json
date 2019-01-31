@@ -1,5 +1,6 @@
 {
-  "title": "landing",
-  "name": "Steve Person",
-  "intro": "Developer"
+  "title": "Steve Person",
+  "intro": "Developer",
+  "quote": "I build stuff that sells",
+  "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacinia leo. Aliquam in ornare arcu. Vestibulum blandit lobortis velit vitae rhoncus. Donec vestibulum fringilla leo sed viverra. Pellentesque convallis turpis ex, id varius odio porta eget. Nullam accumsan lectus sed mattis feugiat. Aenean ac ligula in sem viverra ultrices. Proin feugiat nec est eu lobortis. Proin mollis tempus libero, vitae hendrerit mauris sodales ac. Proin sit amet quam enim. Nullam vel luctus quam, quis tincidunt odio. Pellentesque rhoncus ante quis neque scelerisque egestas."
 }
