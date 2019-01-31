@@ -23,8 +23,13 @@ collections:
               name: network
               widget: object
               fields:
-                - {label: Name, name: name, widget: string}
-                - {label: Key, name: key, widget: string}
                 - {label: Link, name: link, widget: string}
+                - label: Key
+                  name: key
+                  widget: select
+                  options:
+                  - { label: "Facebook", value: "facebook" }
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "LinkedIn", value: "linkedin" }
 media_folder: static/img
 public_folder: /img
