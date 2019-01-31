@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: 3rem 0;
   padding-bottom: 2.3rem;
-  background: #AAAAAA;
+  background: #d4d4d4;
   color: #535353;
   font-size: 3rem;
   font-weight: bold;
