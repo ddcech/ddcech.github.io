@@ -19,11 +19,12 @@ collections:
             name: "social"
             widget: "list"
             fields:
-            - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-            # - label: Author
-            #   name: author
-            #   widget: object
-            #   fields:
-            #     - {label: Name, name: name, widget: string}
+            - label: Network
+              name: network
+              widget: object
+              fields:
+                - {label: Name, name: name, widget: string}
+                - {label: Key, name: key, widget: string}
+                - {label: Link, name: link, widget: string}
 media_folder: static/img
 public_folder: /img
