@@ -23,8 +23,8 @@ collections:
             #   name: network
             #   widget: object
             fields:
-              - label: Key
-                name: key
+              - label: Network
+                name: network
                 widget: select
                 options:
                 - { label: "Facebook", value: "facebook" }
