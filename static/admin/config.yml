@@ -3,24 +3,6 @@ backend:
   repo: ddcech/ddcech.github.io
   branch: "master"
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "src/pages/projects"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{project_name}}"
-    fields:
-      - { label: "Project Name", name: "project_name", widget: "string" }
-      - { label: "Project Document", name: "project_doc", widget: "file", required: false }
-      - { label: "Project Description", name: "description", widget: "markdown" }
-      - { label: "Date", name: "date", widget: "date", default: "", format: "MMM Do YY", required: false }
-  - name: "social"
-    label: "Social"
-    file: "src/pages/social.json"
-    create: true
-    fields:
-      - {label: PageName, name: pageName, widget: hidden, default: "social"}
-      - {label: Network Name, name: networkName, widget: string}
-      - {label: Link, name: link, widget: string}
   - label: "Pages"
     name: "pages"
     files:
@@ -35,11 +17,13 @@ collections:
           - {label: About, name: about, widget: markdown}
           - label: "Social Links"
             name: "social"
-            widget: "object"
-            fields: 
-              - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
-              - {label: "Facebook", name: "facebook", widget: "string", required: false}
-              - {label: "Twitter", name: "twitter", widget: "string", required: false}
-              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+            widget: "list"
+            fields:
+            - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+            # - label: Author
+            #   name: author
+            #   widget: object
+            #   fields:
+            #     - {label: Name, name: name, widget: string}
 media_folder: static/img
 public_folder: /img
