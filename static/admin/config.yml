@@ -20,7 +20,7 @@ collections:
         name: "landing"
         file: "src/pages/landing.json"
         fields:
-          - {label: PageName, name: pageName, widget: hidden}
+          - {label: PageName, name: pageName, widget: hidden, default: "landing"}
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: string}
           - {label: Quote, name: quote, widget: string}

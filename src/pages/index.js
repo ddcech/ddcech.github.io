@@ -12,7 +12,7 @@ import Footer from 'components/Footer'
 class Home extends Component {
   render() {
     console.log(this.props)
-    const page = this.props.data//.allPagesJson.edges.node
+    const page = this.props.data.allPagesJson.edges[0].node
     console.log(page)
 
     return (
@@ -38,7 +38,7 @@ Home.propTypes = {
 
 export const query = graphql`
   query IndexQuery {
-    allPagesJson(filter: {title: {eq: "landing"}}) {
+    allPagesJson(filter: {pageName: {eq: "landing"}}) {
       edges {
         node {
           id
