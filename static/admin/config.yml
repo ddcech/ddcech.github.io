@@ -28,7 +28,6 @@ collections:
           - label: "Social Links"
             name: "social"
             widget: "object"
-            required: false
             fields: 
               - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
               - {label: "Facebook", name: "facebook", widget: "string", required: false}
