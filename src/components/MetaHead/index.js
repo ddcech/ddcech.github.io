@@ -16,8 +16,8 @@ const MetaHead = ({ title, description }) => (
 )
 
 MetaHead.defaultProps = {
-  title: 'Porfolio',
-  description: 'My lifes work',
+  title: 'Portfolio',
+  description: 'My lifes greates achievements',
 }
 
 MetaHead.propTypes = {
